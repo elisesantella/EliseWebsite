@@ -22,7 +22,9 @@ const Home = () => {
             </div>
           </div>
           <div className="rightContainer">
-            <div className="cocktailContainer"></div>
+            <div className="cocktailContainer">
+                <div className="champagneGif"></div>
+            </div>
           </div>
           </div>
         </div>
