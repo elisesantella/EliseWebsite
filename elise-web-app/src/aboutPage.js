@@ -1,5 +1,6 @@
 import React from 'react';
-import './StyleSheets/homePage.css'; // ✅ Correct path to your CSS file
+import { Link } from 'react-router-dom';
+import './StyleSheets/aboutPage.css'; 
 
 const Home = () => {
     return (
