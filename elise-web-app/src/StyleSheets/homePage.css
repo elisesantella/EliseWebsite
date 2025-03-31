@@ -1,0 +1,192 @@
+.backgroundWrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.background {
+    background-image: url('/public/images/curtainBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;  /* Cover entire background */
+}
+
+.container {
+    display: flex;               
+    flex-direction: row; 
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(25, 240, 18, 0)
+}
+
+.leftContainer {
+    width: 50%;
+    height: 100%;  
+    /*background-color: rgba(5, 0, 0, 0.8);*/
+}
+
+.titleContainer {
+    width: 85%;
+    height: 15%;
+    margin-top: 30px;
+    margin-left: 20px;
+    /*background-color: rgba(212, 30, 30, 0.8)*/
+}
+
+.titleText {
+    font-family: 'Limelight', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 80px;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+@keyframes riseUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.introContainer {
+    width: 70%;
+    height: 35%;
+    margin-top: 20px;
+    margin-left: 20px;
+    /*background-color: rgba(79, 30, 212, 0.8);*/
+}
+
+.introText1 {
+    font-size: 6rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 80px;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+.introText2 {
+    font-size: 6rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: -110px;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+.introText3 {
+    font-size: 2rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: -80px;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+.buttonContainer {
+    width: 35%;
+    height: 10%;
+    margin-top: 140px;
+    margin-left: 95px;
+    /*background-color: rgba(33, 212, 30, 0.8);*/
+}
+
+.introButton {
+    width: 100%;
+    height: 80%;
+    background-color: #4caf4f00;       
+    border: 2px solid #f08f0e;                 
+    cursor: pointer;                  /* Change cursor to a hand */
+    transition: background-color 0.3s ease;  /* Smooth transition on hover */
+    display: flex;
+    justify-content: flex-start;  /* Align text to the left horizontally */
+    align-items: center;  /* Vertically center the text */
+    padding-left: 30px;  
+    background-image: url('/public/images/homeArrow.png');  /* Arrow image as background */
+    background-repeat: no-repeat;  
+    background-position: right center;  
+    background-size: 100px 70px;   
+    padding-right: 30px;  
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+.introButton:hover {
+    background-color: #f08f0e;       
+    border-color: #fdcb89;   
+}
+
+.buttonText {
+    font-size: 30px; 
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: normal;
+    color: white;    
+}
+
+.rightContainer {
+    width: 50%;
+    height: 100%;  
+    /*background-color: rgba(244, 16, 191, 0.8);*/
+}
+
+.cocktailContainer {
+    width: 100%;
+    height: 75%;
+    margin-top: 175px;
+   /* background-color: rgba(231, 246, 25, 0.8);*/
+    background-image: url('/public/images/laptopImage.png');  /* Image path from the public folder */
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+}
+
+.champagneGif {
+    position: relative;
+    top: 33%;
+    left: 15%;
+    width: 50%;
+    height: 45%; /* Adjust the height as per your design */
+    background-image: url('/public/images/champagneGif.gif');
+    transform: rotate(-5deg); /* Rotate the GIF counterclockwise by 45 degrees */
+  }
