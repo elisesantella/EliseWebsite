@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './StyleSheets/homePage.css'; // ✅ Correct path to your CSS file
 
 const Home = () => {
@@ -16,9 +17,11 @@ const Home = () => {
                 <h5 className="introText3">A place where software meets passion</h5>
             </div>
             <div className="buttonContainer">
+            <Link to="/about" style={{ textDecoration: 'none' }}>
                 <button className="introButton">
                     <h5 className="buttonText">WORK WITH ME</h5> 
                 </button>
+            </Link>
             </div>
           </div>
           <div className="rightContainer">

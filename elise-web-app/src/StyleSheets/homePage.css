@@ -153,7 +153,7 @@
 
 .introButton:hover {
     background-color: #f08f0e;       
-    border-color: #fdcb89;          
+    border-color: #fdcb89;   
 }
 
 .buttonText {
@@ -161,7 +161,7 @@
     font-family: 'Saira Extra Condensed', sans-serif;
     letter-spacing: -0.05em;
     font-weight: normal;
-    color: white;           
+    color: white;    
 }
 
 .rightContainer {
