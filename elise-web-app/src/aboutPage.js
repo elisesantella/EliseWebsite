@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './StyleSheets/aboutPage.css'; 
+import content from './Text/aboutBody.json';
 
 const About = () => {
     return (  
@@ -24,7 +25,14 @@ const About = () => {
                   </div>
                 </Link>
               </div>
-              <h5 className="aboutBodyText">INSERT TEXT SOMEHOW</h5>
+              <p className="aboutBodyText">
+                {content.aboutText.split('\n').map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
         </div>
