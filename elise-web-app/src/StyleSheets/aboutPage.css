@@ -1,0 +1,165 @@
+.backgroundWrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.background {
+    background-image: url('/public/images/curtainBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;  /* Cover entire background */
+}
+
+.aboutContainer {
+    display: flex;               
+    flex-direction: row; 
+    width: 100%;
+    height: 100%;
+    background-color:#a8c8bd;
+    justify-content: center;  /* Align text to the left horizontally */
+    align-items: center;  /* Vertically center the text */
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+.photoContainer {
+    display: flex;               
+    flex-direction: row; 
+    width: 40%;
+    height: 85%;
+    /*background-color:#442ad7;*/
+    margin-right: 15px;
+    background-image: url('/public/images/GraduationPicture.jpg');  /* Image path from the public folder */
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+@keyframes riseUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px); /* Start below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+
+.buttonMoreContainer {
+    width: 40%;
+    height: 10%;
+    margin-top: 530px;
+    margin-left: 355px;
+    /*background-color: rgba(39, 30, 212, 0.8);*/
+}
+
+.findMoreButton {
+    width: 100%;
+    height: 80%;
+    background-color: #f0b639;       
+    border: 2px solid #f08f0e;             
+    cursor: pointer;                  /* Change cursor to a hand */
+    transition: background-color 0.3s ease;  /* Smooth transition on hover */
+    display: flex;
+    justify-content: flex-start;  /* Align text to the left horizontally */
+    align-items: center;  /* Vertically center the text */
+    padding-left: 15px;  
+    background-image: url('/public/images/homeArrow.png');  /* Arrow image as background */
+    background-repeat: no-repeat;  
+    background-position: right center;  
+    background-size: 100px 70px;   
+    padding-right: 0px;  
+}
+
+.findMoreButton:hover {
+    background-color: #f08f0e;       
+    border-color: #fdcb89;   
+}
+
+.buttonMoreText {
+    font-size: 30px; 
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: normal;
+    color: white;    
+}
+
+.aboutMeContainer {
+    display: flex;               
+    flex-direction: column; 
+    width: 40%;
+    height: 85%;
+    background-color:#073318;
+    margin-left: 15px;
+}
+
+.aboutTitleContainer {
+    width: 100%;
+    height: 20%;
+    /*background-color: rgba(212, 30, 30, 0.8);*/
+    display: flex;
+    justify-content: flex-start;  /* Align text to the left horizontally */
+    align-items: start;  /* Vertically center the text */              
+    flex-direction: row; 
+}
+
+.aboutTitleText {
+    font-size: 5rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    color: #fffbcc;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: -10px;
+}
+/* Ensure the link wrapper behaves correctly */
+.homeIconWrapper {
+    display: inline-block; /* Makes sure Link doesn't interfere */
+}
+
+/* Ensure the button styles remain */
+.homeIconContainer {
+    width: 100px; /* Set explicit size */
+    height: 100px; 
+    margin-top: 5px;
+    margin-left: 115px;
+    background-color: rgba(66, 30, 212, 0);
+    border: none;
+    background-image: url('/public/images/homeIcon.png');
+    background-repeat: no-repeat;  
+    background-position: center;  
+    background-size: contain;  /* Ensure full image is shown */
+    cursor: pointer; /* Makes it clear it's clickable */
+}
+
+/* Hover effect */
+.homeIconContainer:hover {
+    background-color: #f08e0e1a;       
+    border-radius: 100%;
+}
+
+.aboutBodyText {
+    font-size: 1.7rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 0px;   
+}
+
