@@ -10,9 +10,11 @@ const About = () => {
           <div className="aboutContainer">
             <div className="photoContainer">
               <div className="buttonMoreContainer">
-                <button className="findMoreButton">
-                  <h5 className="buttonMoreText">FIND OUT MORE</h5> 
-                </button>
+                <Link to="/portfolio" style={{ textDecoration: 'none' }}>
+                  <button className="findMoreButton">
+                    <h5 className="buttonMoreText">FIND OUT MORE</h5> 
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="aboutMeContainer">
