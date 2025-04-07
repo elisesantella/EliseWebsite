@@ -1,0 +1,107 @@
+.backgroundWrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.background {
+    background-image: url('/public/images/curtainBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;  /* Cover entire background */
+}
+
+.portfolioContainer {
+    display: flex;               
+    flex-direction: row; 
+    width: 100%;
+    height: 100%;
+    background-color:#a8c8bd;
+    justify-content: center;  /* Align text to the left horizontally */
+    align-items: center;  /* Vertically center the text */
+}
+
+.projectsContainer {
+    display: flex;               
+    flex-direction: row; 
+    width: 85%;
+    height: 85%;
+    background-color:#073318;
+    margin-left: 15px;
+
+    /* Initial position off-screen */
+    opacity: 0;
+    transform: translateY(40px); /* Start position: 40px lower */
+    /* Add the animation */
+    animation: riseUp 1s ease-out forwards; /* 1s duration, ease-out timing, forwards to maintain end state */
+}
+
+@keyframes riseUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px); /* Start below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+  }
+
+.textContainer {
+    display: flex;               
+    flex-direction: row; 
+    width: 50%;
+    height: 100%;
+    /*background-color:#ef380a;*/
+    justify-content: start;  /* Align text to the left horizontally */
+    align-items: start;  /* Vertically center the text */
+}
+
+.portfolioTitleContainer {
+    width: 100%;
+    height: 20%;
+    /*background-color: rgba(212, 30, 30, 0.8);*/
+    display: flex;
+    justify-content: flex-start;  /* Align text to the left horizontally */
+    align-items: start;  /* Vertically center the text */              
+    flex-direction: row; 
+}
+
+.portfolioTitle {
+    font-size: 5rem;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    color: #fffbcc;
+    text-align: left;
+    margin-left: 25px;
+    margin-top: -10px;
+}
+
+.portfolioImageContainer {
+        display: flex;               
+        flex-direction: row; 
+        width: 50%;
+        height: 100%;
+        /*background-color:#ae0aef;*/
+        justify-content: end;  /* Align text to the left horizontally */
+        align-items: end;  /* Vertically center the text */
+
+}
+
+.cakeContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px; /* Adjust size as needed */
+    height: 500px;
+   /* background-color: rgba(231, 246, 25, 0.8);*/
+    background-image: url('/public/images/cakeImage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 130%; 
+    z-index: 10; /* Ensure it appears above other content */
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
